@@ -8,8 +8,6 @@
 
 </div>
 
-<footer class="site-footer">The footer.</footer>
-
 <?php wp_footer(); ?>
 
 </body>

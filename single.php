@@ -4,15 +4,14 @@
  *
  */
 
-get_header();
+get_header('post');
 ?>
 
 <main id="main" class="site-main" role="main">
-
 	<?php
 	while ( have_posts() ) : the_post();
 
-		get_template_part( 'template-parts/content', get_post_type() );
+		get_template_part( 'template-parts/post', get_post_type() );
 
 	endwhile;
 	?>
@@ -20,4 +19,4 @@ get_header();
 </main>
 
 <?php
-get_footer();
+get_footer('post');

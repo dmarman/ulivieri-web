@@ -55,8 +55,8 @@ add_action( 'widgets_init', 'untheme_widgets_init' );
  */
 function untheme_scripts() {
 	wp_enqueue_style( 'untheme-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'untheme-custom-style', get_template_directory_uri() . '/assets/css/style.css' );
-	wp_enqueue_script( 'untheme-scripts', get_template_directory_uri() . '/assets/js/scripts.js' );
+	wp_enqueue_style( 'untheme-custom-style', get_template_directory_uri() . '/assets/css/style.css?v=4' );
+	//wp_enqueue_script( 'untheme-scripts', get_template_directory_uri() . '/assets/js/scripts.js' );
 }
 add_action( 'wp_enqueue_scripts', 'untheme_scripts' );
 
@@ -82,3 +82,13 @@ function untheme_create_post_custom_post() {
 	));
 }
 add_action('init', 'untheme_create_post_custom_post'); // Add our work type
+
+if (class_exists('MultiPostThumbnails')) {
+    new MultiPostThumbnails(
+        array(
+            'label' => __( 'Inside Post Hero Image', '[YOUR THEME TEXT DOMAIN]'),
+            'id' => 'secondary-image',
+            'post_type' => 'post',
+        )
+    );
+}

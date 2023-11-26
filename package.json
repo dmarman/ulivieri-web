@@ -20,5 +20,11 @@
     "laravel-mix": "^6.0.16",
     "postcss": "^8.2.9",
     "tailwindcss": "^2.1.1"
+  },
+  "dependencies": {
+    "gsap": "^3.6.1",
+    "jquery-scrollify": "^1.0.21",
+    "scrollmagic": "^2.0.8",
+    "scrollmagic-plugin-gsap": "^1.0.4"
   }
 }
